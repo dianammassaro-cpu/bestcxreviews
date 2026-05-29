@@ -1,0 +1,48 @@
+/* bestCXreviews design tokens.
+   Single source of truth for color and type. Import into the site's global CSS.
+   Fonts: Fraunces (display/serif) + Hanken Grotesk (text/UI), both SIL OFL. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Core */
+  --color-ink: #16191D;          /* primary text, dark surfaces */
+  --color-deep-ink: #0E1013;     /* near-black surfaces */
+  --color-paper: #F4F0E8;        /* primary background (warm, not white) */
+  --color-paper-2: #EDE7DA;      /* secondary background / cards */
+  --color-emerald: #0F7A52;      /* primary accent (use sparingly) */
+  --color-emerald-light: #23A877;/* accent on dark backgrounds, highlights */
+
+  /* Supporting neutrals */
+  --color-slate: #5B6168;        /* secondary text */
+  --color-hairline: #DAD4C8;     /* borders, rules */
+
+  /* Extended palette: charts and rare editorial only, never UI chrome */
+  --color-chart-1: #0F7A52;      /* emerald */
+  --color-chart-2: #23A877;      /* emerald light */
+  --color-chart-3: #3E5C7E;      /* steel */
+  --color-chart-4: #5B6168;      /* slate */
+
+  /* Type families */
+  --font-display: "Fraunces", Georgia, serif;        /* headlines, titles, pull quotes */
+  --font-text: "Hanken Grotesk", system-ui, sans-serif; /* body, UI, labels, wordmark */
+
+  /* Type scale (desktop baseline) */
+  --fs-display: 40px;   /* Fraunces 600 */
+  --fs-h2: 27px;        /* Fraunces 600 */
+  --fs-h3: 19px;        /* Hanken Grotesk 700 */
+  --fs-body: 16px;      /* Hanken Grotesk 400 */
+  --fs-eyebrow: 12px;   /* Hanken Grotesk 600, uppercase, letter-spacing .16em */
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;   /* monogram / app-icon tiles */
+}
+
+/* Usage notes:
+   - Default page is --color-paper background, --color-ink text.
+   - Emerald is the single accent; do not introduce other accent hues in UI.
+   - Eyebrows: text-transform: uppercase; letter-spacing: .16em; color: --color-emerald or --color-slate.
+   - No gradients, no glows, no drop shadows on the logo.
+   - Logos live in /design as outlined SVG (font-independent). */

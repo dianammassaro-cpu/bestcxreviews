@@ -1,0 +1,436 @@
+<!-- bestCXreviews Brand Standards. Self-contained page; references logo SVGs in the same /design folder. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bestCXreviews · Brand Standards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16191D;
+    --deep:#0E1013;
+    --paper:#F4F0E8;
+    --paper-2:#EDE7DA;
+    --emerald:#0F7A52;
+    --emerald-light:#23A877;
+    --slate:#5B6168;
+    --hairline:#DAD4C8;
+    --steel:#3E5C7E;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"tnum" 0;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--emerald)}
+  .eyebrow.muted{color:var(--slate)}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  .serif-i{font-family:"Fraunces",serif;font-style:italic;font-weight:400}
+  .mono-num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+  hr{border:0;border-top:1px solid var(--hairline);margin:0}
+
+  /* ---- top bar ---- */
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(244,240,232,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .topbar img{height:20px;display:block}
+  .topbar nav{display:flex;gap:26px}
+  .topbar nav a{font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--slate);text-decoration:none}
+  .topbar nav a:hover{color:var(--ink)}
+  @media(max-width:720px){.topbar nav{display:none}}
+
+  /* ---- hero ---- */
+  .hero{padding:96px 0 80px;border-bottom:1px solid var(--hairline)}
+  .hero .lede-mark img{height:74px;margin-bottom:40px}
+  .hero h1{font-size:clamp(42px,7vw,84px);max-width:14ch}
+  .hero h1 .em{color:var(--emerald)}
+  .hero p.sub{margin-top:28px;font-size:20px;max-width:54ch;color:var(--ink)}
+  .meta-row{display:flex;flex-wrap:wrap;gap:48px;margin-top:52px}
+  .meta-row .item{}
+  .meta-row .item .k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
+  .meta-row .item .v{font-family:"Fraunces",serif;font-size:19px}
+
+  /* ---- section scaffold ---- */
+  section{padding:84px 0;border-bottom:1px solid var(--hairline)}
+  .sec-head{display:flex;gap:20px;align-items:baseline;margin-bottom:44px}
+  .sec-head .num{font-family:"Fraunces",serif;font-size:15px;color:var(--emerald);font-weight:600;font-variant-numeric:tabular-nums}
+  .sec-head h2{font-size:clamp(28px,4vw,40px)}
+  .sec-head .desc{margin-left:auto;max-width:38ch;color:var(--slate);font-size:15px;text-align:right}
+  @media(max-width:720px){.sec-head{flex-direction:column;gap:8px}.sec-head .desc{margin-left:0;text-align:left}}
+
+  /* ---- logo specimens ---- */
+  .logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:720px){.logo-grid{grid-template-columns:1fr}}
+  .specimen{border:1px solid var(--hairline);border-radius:14px;overflow:hidden;background:#fff}
+  .specimen .stage{display:flex;align-items:center;justify-content:center;padding:54px 32px;min-height:180px}
+  .specimen .stage.light{background:var(--paper)}
+  .specimen .stage.dark{background:var(--deep)}
+  .specimen .stage.em{background:var(--emerald)}
+  .specimen .stage img{max-width:78%;max-height:84px}
+  .specimen .cap{display:flex;justify-content:space-between;padding:14px 18px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--slate)}
+  .specimen .cap b{color:var(--ink);font-weight:600}
+
+  .mono-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px}
+  .mono-chip{text-align:center}
+  .mono-chip img{width:104px;height:104px;border-radius:22px;display:block}
+  .mono-chip span{display:block;margin-top:10px;font-size:12px;color:var(--slate)}
+  .mono-chip .fav{width:48px;height:48px;border-radius:11px;margin:0 auto}
+  .mono-chip .fav-l{width:28px;height:28px;border-radius:7px;margin:0 auto}
+
+  /* clearspace + minsize */
+  .util-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-top:30px}
+  @media(max-width:720px){.util-grid{grid-template-columns:1fr}}
+  .panel{border:1px solid var(--hairline);border-radius:14px;background:#fff;padding:28px}
+  .panel h3{font-size:16px;font-family:"Hanken Grotesk",sans-serif;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+  .panel p{font-size:14px;color:var(--slate);margin-bottom:20px}
+  .clearbox{position:relative;background:var(--paper);border-radius:10px;padding:34px;display:flex;justify-content:center;align-items:center}
+  .clearbox .guide{position:absolute;border:1px dashed var(--emerald-light);opacity:.7;inset:18px}
+  .clearbox img{height:46px;position:relative}
+  .minsizes{display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap}
+  .minsizes .ms{text-align:center}
+  .minsizes .ms img{display:block}
+  .minsizes .ms .lab{font-size:11px;color:var(--slate);margin-top:8px}
+
+  /* misuse */
+  .dont-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+  @media(max-width:720px){.dont-grid{grid-template-columns:1fr 1fr}}
+  .dont{border:1px solid var(--hairline);border-radius:12px;background:#fff;overflow:hidden}
+  .dont .vis{height:96px;display:flex;align-items:center;justify-content:center;background:var(--paper);overflow:hidden}
+  .dont .vis img{height:30px}
+  .dont .txt{display:flex;gap:8px;align-items:flex-start;padding:12px 14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--slate)}
+  .dont .x{color:var(--slate);font-weight:800;flex:none;line-height:1.3}
+  .skew img{transform:skewX(-12deg)}
+  .squish img{transform:scaleX(.55)}
+  .glow{background:radial-gradient(circle,#b388ff,#5b8cff)!important}
+  .glow img{filter:drop-shadow(0 0 8px #fff)}
+  .recolor img{filter:hue-rotate(220deg) saturate(2)}
+  .crowd{background:var(--paper)}
+  .crowd .mini{display:flex;align-items:center;gap:4px}
+  .crowd .mini img{height:22px}
+  .crowd .mini b{font-size:9px;color:var(--ink)}
+
+  /* ---- colors ---- */
+  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:720px){.swatches{grid-template-columns:1fr 1fr}}
+  .sw{border:1px solid var(--hairline);border-radius:14px;overflow:hidden;background:#fff}
+  .sw .fill{height:120px;display:flex;align-items:flex-end;padding:14px}
+  .sw .fill .tag{font-size:11px;font-weight:600;letter-spacing:.04em}
+  .sw .body{padding:14px 16px}
+  .sw .body .nm{font-weight:700;font-size:15px}
+  .sw .body .hex{font-size:13px;color:var(--slate);font-variant-numeric:tabular-nums;margin-top:2px}
+  .sw .body .use{font-size:12.5px;color:var(--slate);margin-top:8px;line-height:1.45}
+  .neutral-row{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
+  .neutral-row .nchip{flex:1;min-width:120px;border:1px solid var(--hairline);border-radius:10px;overflow:hidden}
+  .neutral-row .nchip .nf{height:54px}
+  .neutral-row .nchip .ni{padding:8px 10px;font-size:11.5px}
+  .neutral-row .nchip .ni .nm{font-weight:600}
+  .neutral-row .nchip .ni .hx{color:var(--slate);font-variant-numeric:tabular-nums}
+  .data-row{display:flex;gap:10px;margin-top:22px}
+  .data-row .d{flex:1;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600}
+
+  /* ---- type ---- */
+  .type-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:720px){.type-pair{grid-template-columns:1fr}}
+  .type-card{border:1px solid var(--hairline);border-radius:14px;background:#fff;padding:30px}
+  .type-card .fam{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:14px}
+  .type-card .big-serif{font-family:"Fraunces",serif;font-size:74px;line-height:.95;font-weight:600}
+  .type-card .big-sans{font-family:"Hanken Grotesk",sans-serif;font-size:74px;line-height:.95;font-weight:700;letter-spacing:-.02em}
+  .type-card .glyphs{font-family:inherit;color:var(--slate);margin-top:18px;font-size:15px;letter-spacing:.02em}
+  .type-card .ff{font-family:"Fraunces",serif}
+  .type-card .hg{font-family:"Hanken Grotesk",sans-serif}
+  .type-card .role{margin-top:18px;font-size:13.5px;color:var(--slate);line-height:1.5}
+  .scale{margin-top:30px;border-top:1px solid var(--hairline)}
+  .scale .ln{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--hairline)}
+  .scale .ln .role{flex:none;width:130px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+  .scale .ln .smp{flex:1}
+  .s-display{font-family:"Fraunces",serif;font-size:40px;font-weight:600;line-height:1}
+  .s-h2{font-family:"Fraunces",serif;font-size:27px;font-weight:600}
+  .s-h3{font-family:"Hanken Grotesk",sans-serif;font-size:19px;font-weight:700}
+  .s-body{font-size:16px}
+  .s-label{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+
+  /* ---- voice ---- */
+  .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:720px){.voice-grid{grid-template-columns:1fr}}
+  .vcard{border:1px solid var(--hairline);border-radius:14px;background:#fff;padding:28px}
+  .vcard .n{font-family:"Fraunces",serif;font-size:14px;color:var(--emerald);font-weight:600}
+  .vcard h3{font-family:"Fraunces",serif;font-size:23px;margin:6px 0 12px}
+  .vcard p{font-size:14.5px;color:var(--slate)}
+  .vcard .pair{margin-top:16px;font-size:13px;display:flex;flex-direction:column;gap:6px}
+  .vcard .pair .we{color:var(--emerald)}
+  .vcard .pair .not{color:var(--slate)}
+  .vcard .pair span b{font-weight:700}
+
+  /* ---- application sample ---- */
+  .app-masthead{border:1px solid var(--hairline);border-radius:16px;overflow:hidden;background:#fff;margin-top:8px}
+  .app-masthead .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;border-bottom:1px solid var(--hairline)}
+  .app-masthead .bar img{height:19px}
+  .app-masthead .bar .links{display:flex;gap:22px;font-size:12.5px;font-weight:600;color:var(--slate)}
+  .app-masthead .headline{padding:46px 40px 40px}
+  .app-masthead .headline .kicker{color:var(--emerald);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+  .app-masthead .headline h3{font-family:"Fraunces",serif;font-size:clamp(26px,4vw,40px);font-weight:600;margin-top:14px;max-width:20ch;line-height:1.04}
+  .app-masthead .headline .by{margin-top:18px;font-size:13.5px;color:var(--slate)}
+  .app-masthead .headline .badge{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:var(--paper);border:1px solid var(--hairline);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600}
+  .app-masthead .headline .badge i{width:8px;height:8px;border-radius:50%;background:var(--emerald);display:inline-block}
+
+  footer{padding:60px 0 90px}
+  footer .row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+  footer img{height:22px}
+  footer .note{font-size:12.5px;color:var(--slate);max-width:40ch}
+
+  @media print{
+    .topbar{display:none}
+    section,.hero{break-inside:avoid}
+    body{font-size:12px}
+  }
+</style>
+
+<div class="topbar">
+  <div class="wrap row">
+    <img src="logo-primary.svg" alt="bestCXreviews">
+    <nav>
+      <a href="#logo">Logo</a>
+      <a href="#color">Color</a>
+      <a href="#type">Type</a>
+      <a href="#voice">Voice</a>
+      <a href="#apply">Application</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="lede-mark"><img src="logo-primary.svg" alt="bestCXreviews logo"></div>
+    <h1>The independent <span class="em">voice</span> on AI customer conversations.</h1>
+    <p class="sub">Brand standards. How we look, how we sound, and the rules that keep us recognizable and trusted across every surface.</p>
+    <div class="meta-row">
+      <div class="item"><div class="k">Domain</div><div class="v">bestCXreviews.com</div></div>
+      <div class="item"><div class="k">Category</div><div class="v">AI conversation software</div></div>
+      <div class="item"><div class="k">Posture</div><div class="v serif-i">Editorial, anti-hype</div></div>
+      <div class="item"><div class="k">Version</div><div class="v">1.0</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 01 LOGO -->
+<section id="logo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2>The logo</h2>
+      <span class="desc">A confident wordmark where the X is a two-tone crossing mark: emerald and ink strokes meeting, for the exchange between customer and company.</span>
+    </div>
+
+    <div class="logo-grid">
+      <div class="specimen">
+        <div class="stage light"><img src="logo-primary.svg" alt="primary logo"></div>
+        <div class="cap"><b>Primary</b><span>Ink + Emerald · light backgrounds</span></div>
+      </div>
+      <div class="specimen">
+        <div class="stage dark"><img src="logo-reversed.svg" alt="reversed logo"></div>
+        <div class="cap"><b>Reversed</b><span>Paper + Emerald Light · dark backgrounds</span></div>
+      </div>
+    </div>
+
+    <div class="mono-row" style="margin-top:24px;align-items:flex-start">
+      <div class="mono-chip"><img src="monogram-dark.svg" alt="monogram dark"><span>App icon · Ink</span></div>
+      <div class="mono-chip"><img src="monogram-emerald.svg" alt="monogram emerald"><span>App icon · Emerald</span></div>
+      <div class="mono-chip" style="align-self:flex-end"><img class="fav" src="monogram-dark.svg" alt="favicon"><span>Favicon 48px</span></div>
+      <div class="mono-chip" style="align-self:flex-end"><img class="fav-l" src="monogram-emerald.svg" alt="small favicon"><span>Favicon 28px</span></div>
+    </div>
+
+    <div class="util-grid">
+      <div class="panel">
+        <h3>Clear space</h3>
+        <p>Keep clear space around the logo equal to the height of the lowercase letters. Nothing intrudes.</p>
+        <div class="clearbox"><span class="guide"></span><img src="logo-primary.svg" alt="clear space"></div>
+      </div>
+      <div class="panel">
+        <h3>Minimum size</h3>
+        <p>Below these sizes, switch to the monogram. Legibility before presence.</p>
+        <div class="minsizes" style="margin-top:14px">
+          <div class="ms"><img src="logo-primary.svg" style="height:34px" alt="web min"><div class="lab">Web · 140px wide</div></div>
+          <div class="ms"><img src="logo-primary.svg" style="height:22px" alt="print min"><div class="lab">Print · 22mm wide</div></div>
+          <div class="ms"><img src="monogram-emerald.svg" style="height:40px;border-radius:9px" alt="icon min"><div class="lab">Icon · 32px</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="eyebrow muted" style="margin-top:48px">Do not</p>
+    <div class="dont-grid">
+      <div class="dont"><div class="vis skew"><img src="logo-primary.svg"></div><div class="txt"><span class="x">×</span><span>Skew, rotate, or italicize</span></div></div>
+      <div class="dont"><div class="vis squish"><img src="logo-primary.svg"></div><div class="txt"><span class="x">×</span><span>Stretch or condense</span></div></div>
+      <div class="dont"><div class="vis glow"><img src="logo-reversed.svg"></div><div class="txt"><span class="x">×</span><span>Add gradients, glows, or shadows</span></div></div>
+      <div class="dont"><div class="vis recolor"><img src="logo-primary.svg"></div><div class="txt"><span class="x">×</span><span>Recolor outside the palette</span></div></div>
+      <div class="dont"><div class="vis crowd"><div class="mini"><img src="monogram-emerald.svg" style="height:22px;border-radius:5px"><b>CX&nbsp;Reviews™</b></div></div><div class="txt"><span class="x">×</span><span>Crowd it or rebuild the lockup</span></div></div>
+      <div class="dont"><div class="vis" style="background:#cf3a3a"><img src="logo-reversed.svg"></div><div class="txt"><span class="x">×</span><span>Place on low-contrast or clashing color</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 COLOR -->
+<section id="color">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2>Color</h2>
+      <span class="desc">Ink and warm paper carry the trust. Emerald is the single voice of energy, used sparingly.</span>
+    </div>
+
+    <div class="swatches">
+      <div class="sw">
+        <div class="fill" style="background:var(--ink);color:var(--paper)"><span class="tag">PRIMARY</span></div>
+        <div class="body"><div class="nm">Ink</div><div class="hex">#16191D</div><div class="use">Body text, dark surfaces, the foundation. Reads as serious and editorial, never cold.</div></div>
+      </div>
+      <div class="sw">
+        <div class="fill" style="background:var(--paper);color:var(--ink);border-bottom:1px solid var(--hairline)"><span class="tag">PRIMARY</span></div>
+        <div class="body"><div class="nm">Paper</div><div class="hex">#F4F0E8</div><div class="use">The default background. Warm off-white, not stark white. Softens the page, signals craft.</div></div>
+      </div>
+      <div class="sw">
+        <div class="fill" style="background:var(--emerald);color:var(--paper)"><span class="tag">ACCENT</span></div>
+        <div class="body"><div class="nm">Emerald</div><div class="hex">#0F7A52</div><div class="use">The CX in the logo, links, key marks. One accent, used with restraint, so it always means something.</div></div>
+      </div>
+    </div>
+
+    <p class="eyebrow muted" style="margin-top:40px">Supporting neutrals</p>
+    <div class="neutral-row">
+      <div class="nchip"><div class="nf" style="background:#0E1013"></div><div class="ni"><div class="nm">Deep Ink</div><div class="hx">#0E1013</div></div></div>
+      <div class="nchip"><div class="nf" style="background:#5B6168"></div><div class="ni"><div class="nm">Slate</div><div class="hx">#5B6168</div></div></div>
+      <div class="nchip"><div class="nf" style="background:#DAD4C8"></div><div class="ni"><div class="nm">Hairline</div><div class="hx">#DAD4C8</div></div></div>
+      <div class="nchip"><div class="nf" style="background:#23A877"></div><div class="ni"><div class="nm">Emerald Light</div><div class="hx">#23A877</div></div></div>
+    </div>
+
+    <p class="eyebrow muted" style="margin-top:40px">Extended palette · charts &amp; editorial only</p>
+    <div class="data-row">
+      <div class="d" style="background:#0F7A52;color:#fff">Emerald</div>
+      <div class="d" style="background:#23A877;color:#16191D">Emerald Light</div>
+      <div class="d" style="background:#3E5C7E;color:#fff">Steel</div>
+      <div class="d" style="background:#5B6168;color:#fff">Slate</div>
+    </div>
+    <p style="font-size:13px;color:var(--slate);margin-top:14px;max-width:62ch">Muted and editorial by design. These are for data visualization and rare editorial moments only, never for interface chrome. The brand should still read as ink, paper, and emerald at a glance.</p>
+  </div>
+</section>
+
+<!-- 03 TYPE -->
+<section id="type">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2>Typography</h2>
+      <span class="desc">A characterful serif for the voice, a warm grotesque for the workhorse. Both free and open-source.</span>
+    </div>
+
+    <div class="type-pair">
+      <div class="type-card">
+        <div class="fam">Display · Fraunces</div>
+        <div class="big-serif">Aa</div>
+        <div class="glyphs ff">ABCDEFGHIJKLM<br>abcdefghijklm 0123456789</div>
+        <div class="role"><b>Headlines, article titles, pull quotes.</b> Fraunces brings editorial gravitas and a hand-set quality. Use weights 400 to 600. Italics for emphasis and bylines.</div>
+      </div>
+      <div class="type-card">
+        <div class="fam">Text &amp; UI · Hanken Grotesk</div>
+        <div class="big-sans">Aa</div>
+        <div class="glyphs hg">ABCDEFGHIJKLM<br>abcdefghijklm 0123456789</div>
+        <div class="role"><b>Body copy, navigation, labels, the logo.</b> Warm and humanist, highly legible at small sizes. Weights 400 to 800. Uppercase + tracking for eyebrows.</div>
+      </div>
+    </div>
+
+    <div class="scale">
+      <div class="ln"><div class="role">Display</div><div class="smp s-display">Hype meets reality.</div></div>
+      <div class="ln"><div class="role">Heading 2</div><div class="smp s-h2">What the demo did not show you</div></div>
+      <div class="ln"><div class="role">Heading 3</div><div class="smp s-h3">Containment rate, measured honestly</div></div>
+      <div class="ln"><div class="role">Body</div><div class="smp s-body">We tested each AI agent against the same forty support scenarios, then read every transcript by hand. The numbers below are ours, not the vendor's.</div></div>
+      <div class="ln"><div class="role">Eyebrow</div><div class="smp s-label">Independent review</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VOICE -->
+<section id="voice">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2>Voice &amp; tone</h2>
+      <span class="desc">We earn trust the hard way: by being useful, specific, and unafraid to disagree with the market.</span>
+    </div>
+
+    <div class="voice-grid">
+      <div class="vcard">
+        <div class="n">01</div>
+        <h3>Independent, always</h3>
+        <p>We answer to readers, not vendors. Every recommendation can be defended in public, and we say how we make money.</p>
+        <div class="pair">
+          <span class="we">We say: <b>"Strong for high-volume billing questions, weak on nuanced complaints."</b></span>
+          <span class="not">Not: <b>"A leading, best-in-class solution."</b></span>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="n">02</div>
+        <h3>Evidence over adjectives</h3>
+        <p>Claims come with receipts: transcripts, numbers, screenshots. If we cannot show it, we do not assert it.</p>
+        <div class="pair">
+          <span class="we">We say: <b>"Resolved 31 of 40 test cases without escalation."</b></span>
+          <span class="not">Not: <b>"Incredibly powerful AI that transforms support."</b></span>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="n">03</div>
+        <h3>Plain-spoken</h3>
+        <p>We respect the reader's intelligence and their time. Short sentences. Real words. No buzzword soup.</p>
+        <div class="pair">
+          <span class="we">We say: <b>"It hands off to a human when it is unsure."</b></span>
+          <span class="not">Not: <b>"Leverages agentic orchestration to optimize CX."</b></span>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="n">04</div>
+        <h3>Opinionated, with care</h3>
+        <p>We take a position. We also show our reasoning, so a reader who disagrees knows exactly where we parted ways.</p>
+        <div class="pair">
+          <span class="we">We say: <b>"Most 'autonomous' claims do not survive a hard edge case."</b></span>
+          <span class="not">Not: <b>"It depends, every tool has pros and cons."</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 APPLICATION -->
+<section id="apply">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2>In context</h2>
+      <span class="desc">The system at work: a site masthead with the wordmark earning its trust beside real editorial.</span>
+    </div>
+
+    <div class="app-masthead">
+      <div class="bar">
+        <img src="logo-primary.svg" alt="site logo">
+        <div class="links"><span>Reviews</span><span>Analysis</span><span>Playbooks</span><span>Newsletter</span></div>
+      </div>
+      <div class="headline">
+        <div class="kicker">Hype vs. reality</div>
+        <h3>We ran six "autonomous" support agents through the same 40 tickets.</h3>
+        <div class="by serif-i" style="font-family:'Fraunces',serif;font-style:italic">Independent testing, full methodology published.</div>
+        <span class="badge"><i></i>Verified methodology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>
+      <img src="logo-primary.svg" alt="bestCXreviews">
+      <p class="note" style="margin-top:14px">Brand standards v1.0. Logos are supplied as outlined SVG, font-independent and ready for web, print, and design tools.</p>
+    </div>
+    <p class="note" style="text-align:right">Fonts: Fraunces &amp; Hanken Grotesk (SIL Open Font License). Palette: Ink #16191D · Paper #F4F0E8 · Emerald #0F7A52.</p>
+  </div>
+</footer>

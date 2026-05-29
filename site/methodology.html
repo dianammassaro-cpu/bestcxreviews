@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we test — bestCXreviews</title>
+<meta name="description" content="The method behind every bestCXreviews score: the scenario library, hands-on access, grading, transparent scoring, and what we refuse to do.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a class="brand" href="index.html" aria-label="bestCXreviews home"><img src="assets/logo-primary.svg" alt="bestCXreviews"></a>
+    <nav>
+      <a href="reviews.html">Reviews</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="category-map.html">Category map</a>
+      <a href="methodology.html" class="active">Methodology</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="articlehead">
+  <div class="wrap-narrow">
+    <div class="kicker"><span>Methodology</span><span class="dot"></span><span>The trust anchor</span></div>
+    <h1>How we test AI conversation tools</h1>
+    <p class="dek">A review is only worth as much as the method behind it. Here is exactly how we reach a verdict, the scoring we use, and the lines we will not cross.</p>
+    <div class="ameta"><span>Maintained by <b>The editors</b></span><span>Version <b>1.0</b></span><span>Updated <b>May 2026</b></span></div>
+  </div>
+</div>
+
+<article class="prose wrap-narrow">
+  <h2>The principle</h2>
+  <p>We test hands-on, we explain how every verdict was reached, and we state where each tool fails. If we cannot test something properly, we say so rather than guess. The goal is a review you could defend in front of the vendor and your own boss.</p>
+
+  <h2>1. We get real access</h2>
+  <p>We buy our own seat or obtain neutral evaluation access. We do not accept a vendor-configured demo environment as the basis for a score, because demos are tuned to win. When access is provided, we disclose it in the review, and the vendor sees the result at the same time as readers.</p>
+
+  <h2>2. The scenario library</h2>
+  <p>Every tool in a category faces the same scripted scenarios, drawn from real support patterns and held constant across reviews so results are comparable. A typical run includes:</p>
+  <ul>
+    <li><strong>Common requests:</strong> billing, account changes, order status, password and access issues.</li>
+    <li><strong>Multi-step requests</strong> that require looking things up and stitching systems together.</li>
+    <li><strong>Policy edge cases</strong> where the right answer is "it depends," and nuance matters.</li>
+    <li><strong>Out-of-scope traps:</strong> requests the tool should refuse or escalate, to test honesty.</li>
+    <li><strong>Adversarial inputs:</strong> attempts to get the tool to invent policy, leak data, or contradict itself.</li>
+  </ul>
+
+  <h2>3. What we score</h2>
+  <p>Each tool is graded on a transparent set of dimensions. We publish the sub-scores, not just an overall number, so you can weight them for your own situation.</p>
+
+  <div style="border:1px solid var(--hairline);border-radius:14px;background:#fff;padding:28px;margin:30px 0;max-width:var(--measure)">
+    <div class="scorebar"><span class="lab">Resolution quality</span><span class="track"><span class="fill" style="width:90%"></span></span><span class="val num">30%</span></div>
+    <div class="scorebar"><span class="lab">Honesty about limits</span><span class="track"><span class="fill" style="width:70%"></span></span><span class="val num">20%</span></div>
+    <div class="scorebar"><span class="lab">Handoff to humans</span><span class="track"><span class="fill" style="width:60%"></span></span><span class="val num">15%</span></div>
+    <div class="scorebar"><span class="lab">Setup and time-to-value</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="val num">15%</span></div>
+    <div class="scorebar"><span class="lab">Analytics honesty</span><span class="track"><span class="fill" style="width:40%"></span></span><span class="val num">10%</span></div>
+    <div class="scorebar"><span class="lab">Value for money</span><span class="track"><span class="fill" style="width:40%"></span></span><span class="val num">10%</span></div>
+  </div>
+  <p class="tablenote">Weights shown are our current default. We may adjust them by category (for example, voice contact centers weight handoff and guidance higher), and we always disclose the weighting used in each review.</p>
+
+  <h2>4. How we grade</h2>
+  <p>Two reviewers independently grade every transcript against a rubric, and we reconcile disagreements before scoring. Resolution is not "the agent replied." It is "a customer with that request would be genuinely helped, accurately, without a follow-up." We count the follow-up-contact rate, because that is the number that reveals whether deflection was real help or a dead end. We explain this trap in <a href="article-containment-math.html">the containment piece</a>.</p>
+
+  <h2>5. What we publish</h2>
+  <ul>
+    <li>The overall score and every sub-score.</li>
+    <li>The date the verdict was reached, since these tools change fast.</li>
+    <li>Representative transcripts, including the failures.</li>
+    <li>The use cases the tool is wrong for.</li>
+  </ul>
+
+  <h2>What we will not do</h2>
+  <ul>
+    <li>We do not let any vendor pay for a placement, a score, or a change to a verdict.</li>
+    <li>We do not run vendor-supplied demos as the basis for a review.</li>
+    <li>We do not publish a number we cannot show the working for.</li>
+    <li>We do not pretend to be neutral when we have a view. We take a position and show the reasoning.</li>
+  </ul>
+
+  <p>How the site itself stays independent and makes money is on the <a href="about.html">About and independence page</a>.</p>
+</article>
+
+<section class="signup" id="subscribe">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--emerald-light)">Method, in your inbox</p>
+    <h2 style="margin-top:18px">We show our work. Every time.</h2>
+    <p>Subscribe for new reviews and the reasoning behind each verdict.</p>
+    <form onsubmit="this.querySelector('.done').hidden=false;this.querySelector('input').value='';return false;">
+      <input type="email" required placeholder="you@company.com" aria-label="Email address">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <span class="done" hidden style="align-self:center;color:var(--emerald-light);font-weight:600">Thanks. Check your inbox.</span>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><img src="assets/logo-reversed.svg" alt="bestCXreviews"><p class="blurb">The independent voice on AI software for customer conversations.</p></div>
+      <div><h5>Read</h5><a href="reviews.html">Reviews</a><a href="analysis.html">Analysis</a><a href="category-map.html">Category map</a></div>
+      <div><h5>Trust</h5><a href="methodology.html">Methodology</a><a href="about.html">Independence</a><a href="about.html#contact">Contact</a></div>
+      <div><h5>Follow</h5><a href="index.html#subscribe">Newsletter</a><a href="#">LinkedIn</a><a href="#">RSS</a></div>
+    </div>
+    <div class="base"><span>© 2026 bestCXreviews. Independent and reader-supported.</span><span>No vendor pays for placement or influences a verdict.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The category map — bestCXreviews</title>
+<meta name="description" content="A plain-language map of AI customer-conversation software: chatbots, autonomous agents, copilots, conversation intelligence, automated QA, and orchestration.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a class="brand" href="index.html" aria-label="bestCXreviews home"><img src="assets/logo-primary.svg" alt="bestCXreviews"></a>
+    <nav>
+      <a href="reviews.html">Reviews</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="category-map.html" class="active">Category map</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="articlehead">
+  <div class="wrap-narrow">
+    <div class="kicker"><span>Reference</span><span class="dot"></span><span>Cornerstone</span></div>
+    <h1>The category map: chatbots, agents, copilots, and the layer between</h1>
+    <p class="dek">What AI conversation software actually is, in plain language, and how the pieces fit together. The reference we point every other piece back to.</p>
+    <div class="ameta"><span>By <b>The editors</b></span><span>Updated <b>May 2026</b></span><span><b>18 min</b> read</span></div>
+  </div>
+</div>
+
+<article class="prose wrap-narrow">
+  <p>The market for AI customer-conversation tools is loud and badly labeled. Vendors use "agent," "copilot," and "automation" interchangeably, often to make a simpler product sound more advanced. This page fixes the vocabulary. Everything we review fits somewhere on this map.</p>
+
+  <p>Start with the one distinction that matters. Either the AI is <strong>handling the conversation</strong>, or it is <strong>helping a human handle it</strong>. Almost every product is some blend of those two, and the interesting story is how the blend is converging into a single model: AI handles what it can, humans handle the rest, and AI helps them do it.</p>
+
+  <h2>1. Conversations handled by AI</h2>
+
+  <h3>Rule-based chatbots</h3>
+  <p>The oldest layer. Decision trees and keyword matching dressed up as conversation. They are cheap, predictable, and brittle. Many tools marketed today as "AI agents" are, underneath, a decision tree with a language model bolted to the front. Part of our job is telling you which is which.</p>
+
+  <h3>Autonomous AI agents</h3>
+  <p>The category's center of gravity right now. These use large language models to understand a request, look things up, take actions, and resolve or triage without a human. The good ones are genuinely useful on common requests. The honest ones know when to stop. The dangerous ones answer confidently when they should escalate. Examples in our test set include Intercom Fin, Sierra, Decagon, and Ada.</p>
+
+  <h2>2. Conversations handled by humans, assisted by AI</h2>
+
+  <h3>Agent copilots</h3>
+  <p>AI that sits beside a human agent: suggested replies, drafted responses, and answers pulled from your knowledge base in real time. Lower risk than full autonomy because a human approves every word. This is where we see the most defensible ROI today, and we make that argument in <a href="article-copilot-roi.html">a dedicated piece</a>.</p>
+
+  <h3>Real-time guidance</h3>
+  <p>Live coaching during a conversation, most common in voice contact centers: next-best-action prompts, compliance nudges, and sentiment cues. Heaviest to deploy, highest ceiling for complex or regulated work.</p>
+
+  <h3>Conversation intelligence and analytics</h3>
+  <p>After the fact: transcription, topic and sentiment analysis, and trend detection across thousands of conversations. This is how you find out what customers actually contact you about, and it is the layer that tells you whether your AI agent is helping or just deflecting.</p>
+
+  <h3>Automated QA</h3>
+  <p>Scoring conversations for quality at scale, instead of sampling one percent by hand. Useful and honest as long as the tool admits its scores are a model's opinion, not ground truth.</p>
+
+  <h2>3. The orchestration layer</h2>
+  <p>The glue. Routing logic that decides what the AI handles, when it escalates, and how context follows the customer from bot to human and back. It is the least marketed and most underrated part of the stack. A mediocre agent with excellent handoff design beats a brilliant agent that strands customers.</p>
+
+  <blockquote>The product is rarely "the AI." The product is the handoff: who handles what, and what the customer feels at the seam.</blockquote>
+
+  <h2>How to use this map when buying</h2>
+  <ul>
+    <li><strong>Name what you are actually buying.</strong> If a vendor says "agent," ask whether it reasons or just routes. The answer changes the price you should pay.</li>
+    <li><strong>Buy the handoff, not just the bot.</strong> Escalation and context-passing decide the customer experience more than raw resolution rate.</li>
+    <li><strong>Match the layer to the risk.</strong> Start with copilots and QA where a human stays in the loop, then earn your way to autonomy.</li>
+  </ul>
+
+  <p>From here, the rest of the site is applied. See <a href="article-autonomy-gap.html">where autonomy breaks down</a>, how to <a href="article-containment-math.html">measure containment honestly</a>, and our <a href="reviews.html">hands-on reviews</a> of the specific tools.</p>
+</article>
+
+<section class="signup" id="subscribe">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--emerald-light)">Keep the map handy</p>
+    <h2 style="margin-top:18px">We update this as the category shifts.</h2>
+    <p>Subscribe and we will tell you when a new layer or a real breakthrough actually changes the picture.</p>
+    <form onsubmit="this.querySelector('.done').hidden=false;this.querySelector('input').value='';return false;">
+      <input type="email" required placeholder="you@company.com" aria-label="Email address">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <span class="done" hidden style="align-self:center;color:var(--emerald-light);font-weight:600">Thanks. Check your inbox.</span>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><img src="assets/logo-reversed.svg" alt="bestCXreviews"><p class="blurb">The independent voice on AI software for customer conversations.</p></div>
+      <div><h5>Read</h5><a href="reviews.html">Reviews</a><a href="analysis.html">Analysis</a><a href="category-map.html">Category map</a></div>
+      <div><h5>Trust</h5><a href="methodology.html">Methodology</a><a href="about.html">Independence</a><a href="about.html#contact">Contact</a></div>
+      <div><h5>Follow</h5><a href="index.html#subscribe">Newsletter</a><a href="#">LinkedIn</a><a href="#">RSS</a></div>
+    </div>
+    <div class="base"><span>© 2026 bestCXreviews. Independent and reader-supported.</span><span>No vendor pays for placement or influences a verdict.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

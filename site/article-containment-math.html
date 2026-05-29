@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The containment number is lying to you — bestCXreviews</title>
+<meta name="description" content="Why a 70 percent containment rate usually means 70 percent of people gave up, and how to measure deflection honestly.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a class="brand" href="index.html" aria-label="bestCXreviews home"><img src="assets/logo-primary.svg" alt="bestCXreviews"></a>
+    <nav>
+      <a href="reviews.html">Reviews</a>
+      <a href="analysis.html" class="active">Analysis</a>
+      <a href="category-map.html">Category map</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="articlehead">
+  <div class="wrap-narrow">
+    <div class="kicker"><span>Metrics</span><span class="dot"></span><span>9 min read</span></div>
+    <h1>The containment number is lying to you</h1>
+    <p class="dek">"70 percent containment" sounds like success. Often it means 70 percent of customers gave up before reaching a human. Here is how to tell the difference.</p>
+    <div class="ameta"><span>By <b>The editors</b></span><span>Updated <b>May 2026</b></span></div>
+  </div>
+</div>
+
+<article class="prose wrap-narrow">
+  <p>Containment, sometimes called deflection, is the headline metric every AI agent vendor leads with. It measures the share of conversations that did not reach a human agent. The problem is right there in the definition: a conversation can avoid a human because the customer was helped, or because the customer gave up. Containment counts both as a win.</p>
+
+  <blockquote>Deflection measures what did not happen to your staff. It says nothing about what happened to your customer.</blockquote>
+
+  <h2>The two numbers that actually matter</h2>
+  <p>To know whether containment is real, pair it with two metrics the native dashboard tends to bury:</p>
+  <ul>
+    <li><strong>Follow-up-contact rate.</strong> Of the conversations the AI "resolved," how many customers came back within, say, seven days about the same issue? A high rate means your containment is hiding abandonment and reopened problems.</li>
+    <li><strong>Satisfaction on AI-handled conversations, measured separately.</strong> Not blended with human-handled tickets, which masks the difference.</li>
+  </ul>
+
+  <h2>A worked example</h2>
+  <table class="compare" style="margin:28px 0;min-width:0">
+    <thead><tr><th>Tool</th><th class="n">Containment</th><th class="n">Follow-up rate</th><th class="n">Real resolution</th></tr></thead>
+    <tbody>
+      <tr><th>Tool A</th><td class="n">72%</td><td class="n">28%</td><td class="n pill-n">52%</td></tr>
+      <tr><th>Tool B</th><td class="n">61%</td><td class="n">9%</td><td class="n pill-n">56%</td></tr>
+    </tbody>
+  </table>
+  <p class="tablenote">Illustrative figures. Tool A wins the metric every vendor quotes and loses the one that matters. The lower follow-up rate makes Tool B the better deployment.</p>
+
+  <h2>How to hold a vendor to it</h2>
+  <ul>
+    <li>Ask for containment <em>and</em> follow-up-contact rate, defined and measured the same way across vendors.</li>
+    <li>Instrument your own follow-up tracking. Do not accept the vendor's resolution definition unexamined.</li>
+    <li>Run a holdout: a slice of traffic the AI never touches, so you have a true baseline to compare against.</li>
+  </ul>
+
+  <p>This is exactly why our <a href="methodology.html">scoring</a> counts follow-up behavior, and why the <a href="article-autonomy-gap.html">autonomy gap piece</a> treats the stall as a failure even though dashboards score it as a save.</p>
+</article>
+
+<section class="signup" id="subscribe">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--emerald-light)">Numbers, honestly</p>
+    <h2 style="margin-top:18px">Stop arguing from vendor slides.</h2>
+    <p>Subscribe for metrics you can defend and reviews that show the math.</p>
+    <form onsubmit="this.querySelector('.done').hidden=false;this.querySelector('input').value='';return false;">
+      <input type="email" required placeholder="you@company.com" aria-label="Email address">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <span class="done" hidden style="align-self:center;color:var(--emerald-light);font-weight:600">Thanks. Check your inbox.</span>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><img src="assets/logo-reversed.svg" alt="bestCXreviews"><p class="blurb">The independent voice on AI software for customer conversations.</p></div>
+      <div><h5>Read</h5><a href="reviews.html">Reviews</a><a href="analysis.html">Analysis</a><a href="category-map.html">Category map</a></div>
+      <div><h5>Trust</h5><a href="methodology.html">Methodology</a><a href="about.html">Independence</a><a href="about.html#contact">Contact</a></div>
+      <div><h5>Follow</h5><a href="index.html#subscribe">Newsletter</a><a href="#">LinkedIn</a><a href="#">RSS</a></div>
+    </div>
+    <div class="base"><span>© 2026 bestCXreviews. Independent and reader-supported.</span><span>No vendor pays for placement or influences a verdict.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
