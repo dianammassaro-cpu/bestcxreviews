@@ -1,0 +1,6 @@
+# Netlify config for bestCXreviews.
+# The site is a static HTML/CSS build living in the site/ folder.
+# No build step: just publish that directory.
+
+[build]
+  publish = "site"
